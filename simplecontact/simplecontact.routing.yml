@@ -1,0 +1,41 @@
+simplecontact.list.page:
+  path: '/admin/simplecontact/list'
+  defaults:
+    _controller: '\Drupal\simplecontact\Controller\SimplecontactController::simplecontactList'
+    _title: 'List Contacts'
+  requirements:
+    _permission: 'administer simplecontact'
+
+simplecontact.adminentry.form:
+  path: '/admin/simplecontact/edit/{cid}'
+  defaults:
+    _form: '\Drupal\simplecontact\Form\SimplecontactAdminForm'
+    _title: 'Manage Contact'
+    cid: ''
+  requirements:
+    _permission: 'administer simplecontact'
+
+simplecontact.add.form:
+  path: '/simplecontact/add'
+  defaults:
+    _form: '\Drupal\simplecontact\Form\SimplecontactForm'
+    _title: 'Add Contact'
+  requirements:
+    _permission: 'create simplecontact'
+
+simplecontact.delete.form:
+  path: '/admin/simplecontact/delete/{cid}'
+  defaults:
+    _form: '\Drupal\simplecontact\Form\SimplecontactDeleteForm'
+    _title: 'Delete Contact'
+  requirements:
+    _permission: 'administer simplecontact'
+    
+simplecontact.export.page:
+  path: '/admin/simplecontact/export'
+  defaults:
+    _controller: '\Drupal\simplecontact\Controller\SimplecontactController::simplecontactExport'
+    _title: 'Export Contacts'
+  requirements:
+    _permission: 'administer simplecontact'
+    

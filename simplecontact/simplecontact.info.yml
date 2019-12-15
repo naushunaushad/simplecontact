@@ -1,0 +1,5 @@
+name : 'Simplecontact'
+description : 'Provide contact features to add/edit/list contacts.'
+type: module
+package: Contact
+core_version_requirement: ^8 || ^9

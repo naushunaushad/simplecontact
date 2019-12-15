@@ -1,0 +1,11 @@
+simplecontact.adminentry.form:
+  route_name: 'simplecontact.adminentry.form'
+  title: 'Add New Contact'
+  appears_on:
+    - simplecontact.list.page
+    
+simplecontact.export.page:
+  route_name: 'simplecontact.export.page'
+  title: 'Export'
+  appears_on:
+    - simplecontact.list.page    

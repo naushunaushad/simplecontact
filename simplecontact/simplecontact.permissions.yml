@@ -1,0 +1,8 @@
+administer simplecontact:
+  title: 'Administer simplecontact'
+  description: 'Allows to adminster simplecontact module functionalities'
+  restrict access: true
+  
+create simplecontact:
+  title: 'create simplecontact'
+  description: 'Allows to add simplecontact entries.'

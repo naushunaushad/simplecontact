@@ -1,0 +1,11 @@
+services:
+  simplecontact.contacts:
+    class: Drupal\simplecontact\Contacts
+    arguments: ['@database','@country_manager','@link_generator','%contacts.pagelimit%']
+    
+  simplecontact.contactsvalidator:
+    class: Drupal\simplecontact\ContactsValidator    
+    
+parameters:
+    contacts.pagelimit: 30 
+    

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Main file for the simplecontact module.
+ *
+ * @ingroup simplecontact
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function simplecontact_help($route_name, RouteMatchInterface $route_match) {    
+  $output ='';  
+  switch ($route_name) {    
+      
+    case 'help.page.simplecontact':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The simplecontact provides an interface to add, edit, list, export contacts') . '</p>';
+      $output .= '<p>' . t('Different user role can manage contacts by using permissions. Please check the available permissions') . '</p>';
+      $output .= '<ul>';
+      $output .= '<li>'.t('<a href=":url">Add / Edit contact form</a>',[':url'=>Url::fromRoute('simplecontact.adminentry.form')->toString()]);
+      $output .= '<li>'.t('<a href=":url">List / Export  contact</a>',[':url'=>Url::fromRoute('simplecontact.list.page')->toString()]);  
+      $output .= '<li>'.t('<a href=":url">Normal user add contact form</a>',[':url'=>Url::fromRoute('simplecontact.add.form')->toString()]);      
+     break;
+ 
+  }
+  return $output;
+  
+}
+
+
