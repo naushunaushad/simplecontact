@@ -75,7 +75,7 @@ class Contacts {
      * @param type $result
      * @return mixed
      */
-    private function ContactsPrepare($result) {
+    protected function ContactsPrepare($result) {
         if (empty($result)) {
             return NULL;
         }
