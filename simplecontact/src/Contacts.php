@@ -229,8 +229,10 @@ class Contacts {
             ['data' => $this->t('Edit')],
             ['data' => $this->t('Delete')],
         ];
-        $query = $this->db->select(self::TABLE, 's');
-        $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit($this->contactsPagelimit);
+
+        $pager_query = $this->db->select(self::TABLE, 's');
+        $query = $pager_query->extend('Drupal\Core\Database\Query\PagerSelectExtender');
+        $query->limit($this->contactsPagelimit);
         $query->extend('Drupal\Core\Database\Query\TableSortExtender')->orderByHeader($header);
         $query->innerJoin('users_field_data', 'u', 's.uid = u.uid');
         $query->fields('s');
